@@ -1,8 +1,10 @@
 import os
 import anthropic
+from dotenv import load_dotenv
 
 
 def main():
+    load_dotenv()
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
         raise EnvironmentError(
