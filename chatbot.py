@@ -25,10 +25,11 @@ while True:
     response = client.messages.create(
         model="claude-haiku-4-5-20251001",
         max_tokens=1024,
+        system="You are Aura, a friendly, engaging, AI mentor.",
         messages=conversation_history,
     )
 
     assistant_message = response.content[0].text
     conversation_history.append({"role": "assistant", "content": assistant_message})
 
-    print(f"Claude: {assistant_message}\n")
+    print(f"Aura: {assistant_message}\n")
