@@ -57,4 +57,4 @@ async def list_popular_courses(category: str = "data-science", limit: int = 10) 
 
 
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(transport="stdio")
